@@ -1,0 +1,23 @@
+{
+    "name": "twowholeworms/tww-doctrine-freetds",
+    "type": "library",
+    "keywords": ["freetds", "doctrine", "zf2", "sql server", "mssql"],
+    "homepage": "http://github.com/TwoWholeWorms/TwwDoctrineFreeTds",
+    "description": "Docrine2 driver for SQL Server using FreeTDS",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Benjamin Nolan",
+            "email": "benjamin.nolan@vinari.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "doctrine/doctrine-module": "0.*",
+    },
+    "autoload": {
+        "psr-0": {
+            "TwwDoctrineFreeTds\\": "src"
+        }
+    }
+}
