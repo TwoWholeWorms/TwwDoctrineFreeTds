@@ -2,8 +2,10 @@
 
 namespace TwwDoctrineFreeTds\DBAL\Driver\PdoDblib;
 
+use Doctrine\DBAL\Connection as DoctrineConnection;
 use Doctrine\DBAL\Driver\AbstractSQLServerDriver;
 use Doctrine\DBAL\Platforms\SQLServer2012Platform;
+use Doctrine\DBAL\Schema\SQLServerSchemaManager;
 
 /**
  * The PDO-based Sqlsrv driver.
@@ -66,6 +68,14 @@ class Driver extends AbstractSQLServerDriver
     public function getDatabasePlatform()
     {
         return new SQLServer2012Platform();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getSchemaManager(DoctrineConnection $conn)
+    {
+        return new SQLServerSchemaManager($conn);
     }
 
 }

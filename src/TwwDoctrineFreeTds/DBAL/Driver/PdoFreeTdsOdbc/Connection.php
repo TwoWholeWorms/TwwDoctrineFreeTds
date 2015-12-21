@@ -18,9 +18,10 @@ class Connection extends PDOConnection implements ConnectionInterface
      */
     public function getServerVersion()
     {
+        // PDO::getAttribute causes an error, and I haven't worked out how to get the actual server version yet, so hardcode ALL THE THINGS!
         return '1.0.0.0';
     }
-    
+
     /**
      * @override
      */
