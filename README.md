@@ -5,4 +5,4 @@ ZF2 project I maintain to SQL Server databases as Doctrine2 doesn't natively sup
 
 As always, install with composer:
 
- php composer.phar require twowholeworms/tww-doctrine-freetds *
+ php composer.phar require twowholeworms/tww-doctrine-freetds dev-devel
