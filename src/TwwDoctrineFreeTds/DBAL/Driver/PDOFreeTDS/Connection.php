@@ -15,7 +15,7 @@ class Connection extends PDOConnection implements \Doctrine\DBAL\Driver\Connecti
      */
     public function getServerVersion()
     {
-        return 'Microsoft SQL Server';
+        return '1.0.0.0';
     }
 
 }
