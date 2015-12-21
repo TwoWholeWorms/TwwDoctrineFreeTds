@@ -1,6 +1,6 @@
 <?php
 
-namespace TwwDoctrineFreeTds\DBAL\Driver\PDOFreeTDS;
+namespace TwwDoctrineFreeTds\DBAL\Driver\PdoDblib;
 
 use Doctrine\DBAL\Driver\AbstractSQLServerDriver;
 use Doctrine\DBAL\Platforms\SQLServer2012Platform;
@@ -35,26 +35,18 @@ class Driver extends AbstractSQLServerDriver
      */
     private function _constructPdoDsn(array $params)
     {
-        $dsn = 'odbc:driver=FreeTDS;Server=';
+        $dsn = 'dblib:host=';
 
         if (isset($params['host'])) {
             $dsn .= $params['host'];
         }
 
         if (isset($params['port']) && !empty($params['port'])) {
-            $dsn .= ';Port=' . $params['port'];
+            $dsn .= ';port=' . $params['port'];
         }
 
         if (isset($params['dbname'])) {
             $dsn .= ';dbname=' .  $params['dbname'];
-        }
-
-        if (isset($params['user'])) {
-            $dsn .= ';UID=' .  $params['user'];
-        }
-
-        if (isset($params['password'])) {
-            $dsn .= ';PWD=' .  $params['password'];
         }
 
         return $dsn;

@@ -1,6 +1,6 @@
 <?php
 
-namespace TwwDoctrineFreeTds\DBAL\Driver\PDOFreeTDS;
+namespace TwwDoctrineFreeTds\DBAL\Driver\PdoFreeTdsOdbc;
 
 use Doctrine\DBAL\Driver\PDOConnection;
 
