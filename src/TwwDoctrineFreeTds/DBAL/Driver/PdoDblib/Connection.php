@@ -11,6 +11,8 @@ use Doctrine\DBAL\Driver\Connection as ConnectionInterface;
 class Connection extends PDOConnection implements ConnectionInterface
 {
 
+    private $_isDriverLastInsertIdCapable = null;
+
     /**
      * {@inheritdoc}
      */
